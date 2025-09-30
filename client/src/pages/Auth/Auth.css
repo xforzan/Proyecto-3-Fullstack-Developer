@@ -1,0 +1,74 @@
+/*Auth.css*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  padding: 30px;
+  background-color: #1F2127;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  border-radius: 15px;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  background-color: #24262B;
+  color: #E0E0E0;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #fff;
+  background-color: #2A2C32;
+}
+
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+}
+
+
+.changeForm {
+  background-color: transparent;
+  color: white;
+  transition: 200ms ease;
+}
+
+.changeForm:hover {
+  background-color: transparent;
+  color: #c7c7c7;
+}
+
+.changeForm:focus{
+    border: none;
+}
+
+.changeForm:focus,
+.changeForm:focus-visible {
+  outline: none;
+}

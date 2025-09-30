@@ -1,0 +1,1106 @@
+/*Index.css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0B0D0F;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 30px;
+  background-color: #181A1E;
+}
+
+footer, header {
+  color: white;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  background-color: #fff;
+  color: #181A1E;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/*Account.css*/
+.userData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.userData img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.userData input{
+    display: none;
+}
+
+.userData label{
+    cursor: pointer;
+    color: #c7c7c7;
+    transition: color 0.3s ease;
+}
+
+.userData label:hover{
+    color: white;
+}
+
+
+
+
+.avatarLoading {
+  position: relative;
+  display: inline-block;
+}
+
+.avatarImage {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#avatarLoader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  width: 300px;
+  height: 150px;
+  display: none;
+}
+
+/*Appointments.css*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.appointments-container {
+  padding: 20px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "Inter", sans-serif;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.appointment-card-horizontal {
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #1F2127;
+  border: #353535 solid 1px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.appointment-car-image-horizontal {
+  width: 450px;
+  object-fit: cover;
+}
+
+.appointment-info-horizontal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.appointment-info-horizontal p {
+  text-align: start;
+}
+
+.appointment-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appointment-data h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.appointment-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.appointment-date,
+.appointment-vehicle,
+.appointment-vin,
+.appointment-client,
+.appointment-email {
+  font-weight: 200;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.appointment-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.appointment-buttons button {
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+
+
+.appointment-date, .appointment-time{
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.appointment-time::before {
+  content: "";
+  display: inline-block;
+  width: 20px;   /* ancho del icono */
+  height: 20px;  /* alto del icono */
+  margin-right: 5px;
+  background-image: url('/reloj.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.appointment-date::before {
+  content: "";
+  display: inline-block;
+  width: 20px;   /* ancho del icono */
+  height: 20px;  /* alto del icono */
+  margin-right: 5px;
+  background-image: url('/fecha.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.verMasBtn2{
+   display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.verMasBtn2::before {
+  content: "";
+  display: inline-block;
+  width: 20px;       /* ancho del icono */
+  height: 20px;      /* alto del icono */
+  background-image: url('/cancel.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.appointment-buttons button:hover {
+  background-color: #000000;
+}
+
+.appointment-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: white;
+  background-color: #5A5A5A;
+}
+
+.appointment-status.pendiente { background-color: #F59E0B; }
+.appointment-status.confirmada { background-color: #10B981; }
+.appointment-status.cancelada { background-color: #EF4444; }
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  .appointment-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+    max-height: 500px;
+  }
+
+  .appointment-car-image-horizontal {
+    align-self: center;
+    width: 400px;
+    margin-left: 0;
+    object-fit: cover;
+  }
+
+  .appointment-info-horizontal {
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .appointment-card-horizontal {
+    border-radius: 15px;
+    max-height: none;
+  }
+
+  .appointment-car-image-horizontal {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .appointment-info-horizontal {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .appointment-name {
+    font-size: 16px;
+  }
+
+  .appointment-date,
+  .appointment-vehicle,
+  .appointment-vin,
+  .appointment-client,
+  .appointment-email {
+    font-size: 11px;
+  }
+
+  .appointment-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .appointment-buttons button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/*Auth.css*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  padding: 30px;
+  background-color: #1F2127;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  border-radius: 15px;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  background-color: #24262B;
+  color: #E0E0E0;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #fff;
+  background-color: #2A2C32;
+}
+
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+}
+
+
+.changeForm {
+  background-color: transparent;
+  color: white;
+  transition: 200ms ease;
+}
+
+.changeForm:hover {
+  background-color: transparent;
+  color: #c7c7c7;
+}
+
+.changeForm:focus{
+    border: none;
+}
+
+.changeForm:focus,
+.changeForm:focus-visible {
+  outline: none;
+}
+
+/*Schedule.css*/
+
+.schedule-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: #004a99;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0066cc;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/*Vehicle.css*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.carContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.carContainer h2 {
+  font-weight: 500;
+  color: white;
+}
+
+.carImg {
+  width: 60%;
+  min-width: 300px;
+  margin-bottom: -50px;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+/* Contenedor de apartados con Grid */
+.carEspecifications {
+  display: grid;
+  grid-template-columns: 1fr; /* móvil = 1 columna */
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Cada apartado ocupa toda la fila */
+.apartado {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 180px;
+  padding: 15px;
+  border: #353535 solid 1px;
+  border-radius: 30px;
+  background-color: #1f2127;
+}
+
+#apartadoEmisiones{
+  min-height: 320px;
+}
+
+/* Responsivo */
+@media (min-width: 1024px) {
+  .carEspecifications {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .carContainer {
+    flex-direction: column;
+  }
+
+  .carImg {
+    align-self: auto;
+  }
+}
+
+.label {
+  color: #898B8D;
+  font-size: 14px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.englobador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* SVG del neumático centrado */
+.tire-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------------- LIST GROUP ---------------- */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  margin-top: 15px;
+}
+
+.list-group li {
+  padding: 4px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.list-group li:nth-child(1) { background: #69E99B; width: 80px; }
+.list-group li:nth-child(2) { background: #94E890; width: 100px; }
+.list-group li:nth-child(3) { background: #D2E165; width: 120px; }
+.list-group li:nth-child(4) { background: #FFD54D; width: 140px; }
+.list-group li:nth-child(5) { background: #FFBA7A; width: 160px; }
+.list-group li:nth-child(6) { background: #FF886D; width: 180px; }
+.list-group li:nth-child(7) { background: #FF5F5F; width: 200px; }
+
+/* ---------------- INDICADORES ---------------- */
+.indicator,
+.indicator-A,
+.indicator-B,
+.indicator-C,
+.indicator-D,
+.indicator-E,
+.indicator-F,
+.indicator-G,
+.indicator-NA {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+}
+
+.indicator span {
+  font-size: 11px;
+}
+
+/* Indicadores posicionados en contenedor */
+.list-group-container {
+  position: relative; /* base de indicadores absolutos */
+  display: flex;
+  flex-direction: row; /* lista a la izquierda, indicador a la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.indicator-A {  top: 0px; left: 220px; }
+.indicator-B {  top: 0px; left: 220px; }
+.indicator-C {  top: 0px; left: 220px; }
+.indicator-D {  top: 5px; left: 220px; }
+.indicator-E {  top: 40px; left: 220px; }
+.indicator-F {  top: 75px; left: 220px; }
+.indicator-G {  top: 110px; left: 220px; }
+.indicator-NA { top: 0px; left: 220px; }
+
+/* Flechas en los indicadores */
+.indicator-D::after,
+.indicator-E::after,
+.indicator-F::after,
+.indicator-G::after,
+.indicator-C::after,
+.indicator-B::after,
+.indicator-A::after,
+.indicator::after {
+  content: '';
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid black;
+  left: -55px;
+}
+
+.indicator-D::after,
+.indicator-E::after,
+.indicator-F::after,
+.indicator-G::after { top: -20px; }
+
+.indicator-C::after { top: -50px; }
+.indicator-B::after { top: -80px; }
+.indicator-A::after { top: -115px; }
+
+/* Responsive: <390px, indicador debajo de la lista */
+@media (max-width: 390px) {
+  .list-group-container {
+    flex-direction: column;
+  }
+
+  .indicator {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    position: static;
+  }
+
+  .indicator:after {
+    display: none;
+  }
+  
+}
+
+/* ---------------- EMISIONES ---------------- */
+.emissions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-content: left;
+}
+
+.emission-value {
+  font-size: 15px;
+}
+
+.emission-class {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emission-class-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #FF5F5F;
+  color: black;
+}
+
+.apartado-final {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*Vehicles.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.vehicles-container{
+  padding: 20px;
+}
+
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  max-width: 900px;     /* cambia de width fija a max-width */
+  width: 100%;          /* ocupa todo el ancho disponible */
+  margin: 0 auto;       /* centrado en pantallas grandes */
+}
+
+.vehicle-card-horizontal {
+  max-height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #1F2127;
+  border: #353535 solid 1px;
+  border-radius: 30px;
+  overflow: hidden;     /* evita desbordes raros */
+}
+
+.vehicle-image-horizontal {
+  width: 450px;
+  margin-left: -60px;
+  object-fit: cover;
+}
+
+.vehicle-info-horizontal {
+  flex: 1;              /* ocupa todo el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+
+.vehicle-info-horizontal p {
+    text-align: start;
+}
+
+.carButtons {
+  display: flex;
+  flex-wrap: wrap;      /* en pantallas pequeñas, que bajen en filas */
+  gap: 10px;
+}
+
+.carButtons button {
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.carButtons button:hover{
+  background-color: #000000;
+}
+
+.carData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.carName {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.carVin {
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.tallerBtn, .verMasBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.tallerBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/taller.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.verMasBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/engranaje.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  .vehicle-card-horizontal {
+    flex-direction: column; /* pasa a vertical */
+    text-align: center;
+    max-height: 500px;
+    gap: 0px;
+  }
+
+  .vehicle-image-horizontal {
+    align-self: center;
+    width: 400px;
+    margin-left: 0;
+    object-fit: cover;
+}
+
+  .vehicle-info-horizontal {
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .vehicle-card-horizontal {
+    border-radius: 15px;    /* bordes un poco más pequeños */
+    max-height: none;       /* deja que se expanda según el contenido */
+  }
+
+  .vehicle-image-horizontal {
+    width: 100%;            /* ocupa todo el ancho disponible */
+    max-width: 300px;       /* límite para que no se deforme demasiado */
+    height: auto;
+  }
+
+  .vehicle-info-horizontal {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .carName {
+    font-size: 16px;        /* texto más pequeño */
+  }
+
+  .carVin {
+    font-size: 11px;
+  }
+
+  .carButtons {
+    flex-direction: column; /* botones en columna */
+    align-items: stretch;   /* que ocupen todo el ancho */
+    gap: 8px;
+  }
+
+  .carButtons button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .tallerBtn::before,
+  .verMasBtn::before {
+    width: 16px;   /* iconos más pequeños */
+    height: 16px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* más oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1F2127; /* fondo oscuro */
+  color: white; /* texto blanco */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.vehicle-form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #353535; /* borde oscuro */
+  background-color: #2A2C33; /* input oscuro */
+  color: white; /* texto blanco */
+}
+
+.vehicle-form input::placeholder {
+  color: #aaa; /* placeholder gris claro */
+}
+
+.modal-buttons button {
+  background-color: #353535;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #555;
+}
+
+.cancel-btn {
+  background-color: #555;
+}
+
+.cancel-btn:hover {
+  background-color: #777;
+}
+
+.error {
+  color: #ff6b6b; /* rojo más visible sobre fondo oscuro */
+}
+
+/*Footer.css*/
+footer{
+    bottom: 0;
+    padding: 0 20px;
+    height: 40px;
+    background-color: #181A1E;
+}
+
+p{
+    text-align: center;
+}
+
+/*Header.css*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  padding: 20px 40px;
+  background-color: #181A1E;
+  color: white;
+  z-index: 1000;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+nav ul li:hover {
+  color: #ccc;
+}
+
+nav ul a {
+  color: white;
+}
+
+.logo img{
+  width: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+@media (width < 460px) {
+  nav {
+    display: none;
+  }
+  header {
+    height: 60px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*Loading.css*/
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #1E90FF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

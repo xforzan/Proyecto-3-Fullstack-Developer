@@ -1,0 +1,71 @@
+/*Header.css*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  padding: 20px 40px;
+  background-color: #181A1E;
+  color: white;
+  z-index: 1000;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+nav ul li:hover {
+  color: #ccc;
+}
+
+nav ul a {
+  color: white;
+}
+
+.logo img{
+  width: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+@media (width < 460px) {
+  nav {
+    display: none;
+  }
+  header {
+    height: 60px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}

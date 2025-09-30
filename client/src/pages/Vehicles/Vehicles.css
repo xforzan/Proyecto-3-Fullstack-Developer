@@ -1,0 +1,248 @@
+/*Vehicles.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.vehicles-container{
+  padding: 20px;
+}
+
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  max-width: 900px;     /* cambia de width fija a max-width */
+  width: 100%;          /* ocupa todo el ancho disponible */
+  margin: 0 auto;       /* centrado en pantallas grandes */
+}
+
+.vehicle-card-horizontal {
+  max-height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #1F2127;
+  border: #353535 solid 1px;
+  border-radius: 30px;
+  overflow: hidden;     /* evita desbordes raros */
+}
+
+.vehicle-image-horizontal {
+  width: 450px;
+  margin-left: -60px;
+  object-fit: cover;
+}
+
+.vehicle-info-horizontal {
+  flex: 1;              /* ocupa todo el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+
+.vehicle-info-horizontal p {
+    text-align: start;
+}
+
+.carButtons {
+  display: flex;
+  flex-wrap: wrap;      /* en pantallas pequeñas, que bajen en filas */
+  gap: 10px;
+}
+
+.carButtons button {
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.carButtons button:hover{
+  background-color: #000000;
+}
+
+.carData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.carName {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.carVin {
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.tallerBtn, .verMasBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #181A1E;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.tallerBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/taller.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.verMasBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/engranaje.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  .vehicle-card-horizontal {
+    flex-direction: column; /* pasa a vertical */
+    text-align: center;
+    max-height: 500px;
+    gap: 0px;
+  }
+
+  .vehicle-image-horizontal {
+    align-self: center;
+    width: 400px;
+    margin-left: 0;
+    object-fit: cover;
+}
+
+  .vehicle-info-horizontal {
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .vehicle-card-horizontal {
+    border-radius: 15px;    /* bordes un poco más pequeños */
+    max-height: none;       /* deja que se expanda según el contenido */
+  }
+
+  .vehicle-image-horizontal {
+    width: 100%;            /* ocupa todo el ancho disponible */
+    max-width: 300px;       /* límite para que no se deforme demasiado */
+    height: auto;
+  }
+
+  .vehicle-info-horizontal {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .carName {
+    font-size: 16px;        /* texto más pequeño */
+  }
+
+  .carVin {
+    font-size: 11px;
+  }
+
+  .carButtons {
+    flex-direction: column; /* botones en columna */
+    align-items: stretch;   /* que ocupen todo el ancho */
+    gap: 8px;
+  }
+
+  .carButtons button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .tallerBtn::before,
+  .verMasBtn::before {
+    width: 16px;   /* iconos más pequeños */
+    height: 16px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* más oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1F2127; /* fondo oscuro */
+  color: white; /* texto blanco */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.vehicle-form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #353535; /* borde oscuro */
+  background-color: #2A2C33; /* input oscuro */
+  color: white; /* texto blanco */
+}
+
+.vehicle-form input::placeholder {
+  color: #aaa; /* placeholder gris claro */
+}
+
+.modal-buttons button {
+  background-color: #353535;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #555;
+}
+
+.cancel-btn {
+  background-color: #555;
+}
+
+.cancel-btn:hover {
+  background-color: #777;
+}
+
+.error {
+  color: #ff6b6b; /* rojo más visible sobre fondo oscuro */
+}

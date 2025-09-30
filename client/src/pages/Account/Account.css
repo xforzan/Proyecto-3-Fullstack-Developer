@@ -1,0 +1,59 @@
+/*Account.css*/
+.userData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.userData img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.userData input{
+    display: none;
+}
+
+.userData label{
+    cursor: pointer;
+    color: #c7c7c7;
+    transition: color 0.3s ease;
+}
+
+.userData label:hover{
+    color: white;
+}
+
+
+
+
+.avatarLoading {
+  position: relative;
+  display: inline-block;
+}
+
+.avatarImage {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#avatarLoader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  width: 300px;
+  height: 150px;
+  display: none;
+}
+

@@ -1,0 +1,255 @@
+/*Vehicle.css*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.carContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.carContainer h2 {
+  font-weight: 500;
+  color: white;
+}
+
+.carImg {
+  width: 60%;
+  min-width: 300px;
+  margin-bottom: -50px;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+/* Contenedor de apartados con Grid */
+.carEspecifications {
+  display: grid;
+  grid-template-columns: 1fr; /* móvil = 1 columna */
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Cada apartado ocupa toda la fila */
+.apartado {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 180px;
+  padding: 15px;
+  border: #353535 solid 1px;
+  border-radius: 30px;
+  background-color: #1f2127;
+}
+
+#apartadoEmisiones{
+  min-height: 320px;
+}
+
+/* Responsivo */
+@media (min-width: 1024px) {
+  .carEspecifications {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .carContainer {
+    flex-direction: column;
+  }
+
+  .carImg {
+    align-self: auto;
+  }
+}
+
+.label {
+  color: #898B8D;
+  font-size: 14px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.englobador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* SVG del neumático centrado */
+.tire-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------------- LIST GROUP ---------------- */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  margin-top: 15px;
+}
+
+.list-group li {
+  padding: 4px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.list-group li:nth-child(1) { background: #69E99B; width: 80px; }
+.list-group li:nth-child(2) { background: #94E890; width: 100px; }
+.list-group li:nth-child(3) { background: #D2E165; width: 120px; }
+.list-group li:nth-child(4) { background: #FFD54D; width: 140px; }
+.list-group li:nth-child(5) { background: #FFBA7A; width: 160px; }
+.list-group li:nth-child(6) { background: #FF886D; width: 180px; }
+.list-group li:nth-child(7) { background: #FF5F5F; width: 200px; }
+
+/* ---------------- INDICADORES ---------------- */
+.indicator,
+.indicator-A,
+.indicator-B,
+.indicator-C,
+.indicator-D,
+.indicator-E,
+.indicator-F,
+.indicator-G,
+.indicator-NA {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+}
+
+.indicator span {
+  font-size: 11px;
+}
+
+/* Indicadores posicionados en contenedor */
+.list-group-container {
+  position: relative; /* base de indicadores absolutos */
+  display: flex;
+  flex-direction: row; /* lista a la izquierda, indicador a la derecha */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.indicator-A {  top: 0px; left: 220px; }
+.indicator-B {  top: 0px; left: 220px; }
+.indicator-C {  top: 0px; left: 220px; }
+.indicator-D {  top: 5px; left: 220px; }
+.indicator-E {  top: 40px; left: 220px; }
+.indicator-F {  top: 75px; left: 220px; }
+.indicator-G {  top: 110px; left: 220px; }
+.indicator-NA { top: 0px; left: 220px; }
+
+/* Flechas en los indicadores */
+.indicator-D::after,
+.indicator-E::after,
+.indicator-F::after,
+.indicator-G::after,
+.indicator-C::after,
+.indicator-B::after,
+.indicator-A::after,
+.indicator::after {
+  content: '';
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid black;
+  left: -55px;
+}
+
+.indicator-D::after,
+.indicator-E::after,
+.indicator-F::after,
+.indicator-G::after { top: -20px; }
+
+.indicator-C::after { top: -50px; }
+.indicator-B::after { top: -80px; }
+.indicator-A::after { top: -115px; }
+
+/* Responsive: <390px, indicador debajo de la lista */
+@media (max-width: 390px) {
+  .list-group-container {
+    flex-direction: column;
+  }
+
+  .indicator {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    position: static;
+  }
+
+  .indicator:after {
+    display: none;
+  }
+  
+}
+
+/* ---------------- EMISIONES ---------------- */
+.emissions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-content: left;
+}
+
+.emission-value {
+  font-size: 15px;
+}
+
+.emission-class {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emission-class-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #FF5F5F;
+  color: black;
+}
+
+.apartado-final {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

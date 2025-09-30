@@ -1,0 +1,39 @@
+/*Schedule.css*/
+
+.schedule-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: #004a99;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0066cc;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
